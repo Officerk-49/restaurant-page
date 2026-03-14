@@ -1,0 +1,99 @@
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+}
+
+:root {
+   --header-height: 70px;
+   --main-bg-clr: #88A58D;
+   --border-clr: #32543F;
+}
+
+html {
+   font-family: 'roboto', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   overflow-y: scroll;
+}
+
+body {
+   background-color: #4C6554;
+   margin: 0;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+}
+
+#header {
+   background-color: var(--main-bg-clr);
+   flex-shrink: 0;
+   height: var(--header-height);
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: 100;
+   border-bottom: 2px solid var(--border-clr);
+   align-items: stretch;
+}
+
+#header-nav {
+   background-color: inherit;
+   display: flex;
+   justify-content: center;
+   align-items: stretch;
+   height: 100%;
+}
+
+#header-nav button {
+   background-color: inherit;
+   font-size: 1.8rem;
+   font-family: 'Potta One', cursive, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   color: #fff;
+   border: none;
+   border-right: 2px solid var(--border-clr);
+   border-left: 2px solid var(--border-clr);
+   flex: 1;
+}
+
+#header-nav button:focus-visible {
+   outline: 2px solid #fff;
+}
+
+#header-nav button:nth-child(2) {
+   border: none;
+}
+
+#content {
+   background-color: var(--main-bg-clr);
+   color: #fff;
+   min-height: 100vh;
+   width: 100%;
+   max-width: 1000px;
+   margin-inline: auto;
+   overflow-x: hidden;
+   display: flex;
+   flex-direction: column;
+   flex: 1;
+   overflow-y: auto;
+   margin-top: calc(var(--header-height) + (var(--header-height) / 2));
+   border-right: 2px solid var(--border-clr);
+   border-left: 2px solid var(--border-clr);
+   border-top: 2px solid var(--border-clr);
+   border-top-left-radius: 10px;
+   border-top-right-radius: 10px;
+}
+
+#footer {
+   color: #fff;
+   text-align: center;
+   padding:  20px 10px;
+   flex: 1;
+}
+
+#footer a{
+   color: inherit;
+}
+
+#footer a:hover {
+   text-decoration: none;
+}
